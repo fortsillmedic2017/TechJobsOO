@@ -8,7 +8,6 @@ namespace TechJobs.Data
 {
     public class JobFieldData<TField> where TField : JobField, new()
     {
-
         private List<TField> allFields = new List<TField>();
 
         private void Add(TField field)
@@ -32,7 +31,6 @@ namespace TechJobs.Data
 
         internal TField AddUnique(string fieldValue)
         {
-
             var results = from field in allFields
                           where field.Value.Equals(fieldValue)
                           select field;
@@ -52,8 +50,6 @@ namespace TechJobs.Data
             }
 
             return theField;
-
         }
-
     }
 }
